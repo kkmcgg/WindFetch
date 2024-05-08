@@ -2,7 +2,10 @@ import numpy as np
 import rasterio
 from scipy.ndimage.interpolation import rotate
 import copy
-import gdal
+try:
+    import gdal
+except:
+    from osgeo import gdal
 
 class Waterbody():
     '''
